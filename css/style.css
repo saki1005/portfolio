@@ -203,72 +203,74 @@ PORTFOLIO
   margin: 6rem 0 0.5rem;
 }
 
-.pf-list,
-.coding {
+#portfolio h4 {
+  font-size: 14px;
+  text-align: center;
+}
+
+#portfolio .gamedv,
+#portfolio .coding {
   background-color: rgba(255, 255, 255, 0.8);
-  width: 97%;
-  max-width: 600px;
   margin: 0 auto 30px;
   padding: 20px 10px;
   border-radius: 10px;
 }
 
-.pf-list {
+#portfolio .pf-list {
   padding: 20px 30px;
   text-align: center;
 }
 
-.pf-list img {
-  width: 260px;
-  height: 330px;
+#portfolio .pf-list img {
+  width: 320px;
+  height: 190px;
   margin-bottom: 10px;
   border-radius: 3px;
 }
 
-.pf-list section {
+#portfolio .pf-list section {
   margin: 20px auto;
   width: 70%;
   position: relative;
 }
 
-.pf-list section p {
+#portfolio .pf-list section p {
   font-size: 15px;
   font-weight: bold;
 }
 
-.pf-list section .desc {
+#portfolio .pf-list section .desc {
   font-size: 13px;
   font-weight: normal;
 }
 
-.coding h3 {
+#portfolio .gamedv h3,
+#portfolio .coding h3 {
   font-size: 20px;
   text-align: center;
   padding-bottom: 20px;
 }
 
-.cd-list {
+#portfolio .cd-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.cd-list section {
-  margin: 10px 20px;
+#portfolio .cd-list section {
+  margin: 10px 30px;
 }
 
-.cd-list img {
-  width: 170px;
-  height: 300px;
+#portfolio .cd-list img {
+  width: 120px;
+  height: 200px;
   border-radius: 3px;
 }
 
-.cd-list p {
+#portfolio .cd-list p {
+  font-size: 13px;
   text-align: center;
-}
-
-.coming-soon {
-  opacity: 0.2;
+  margin-top: 5px;
 }
 
 /*
@@ -284,7 +286,6 @@ PROFILE
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
 }
 
 #profile .profimg {
@@ -296,19 +297,36 @@ PROFILE
 }
 
 #profile p {
-  width: 500px;
+  width: 630px;
   margin: 0 auto 30px;
   text-align: left;
+  font-size: 15px;
+  line-height: 2.5rem;
+}
+
+#profile p.prof_link {
+  color: #010b5e;
+  font-size: 16px;
+  text-align: right;
+  padding-right: 40px;
+  margin-top: 10px;
+}
+
+#profile p.prof_link a {
+  background-color: #dadffd;
+  padding: 5px;
+  border-radius: 4px;
+  border: 2px solid #8597ff;
+}
+
+#profile p.prof_link :hover {
+  color: #0a178d;
 }
 
 #profile h3 {
   font-family: 'Times New Roman', Times, serif;
   font-size: 30px;
   padding-bottom: 20px;
-}
-
-#profile p {
-  line-height: 1.75rem;
 }
 
 #profile .skill {
@@ -342,19 +360,19 @@ PROFILE
   color: #8d95e4;
 }
 
-#profile .skill .js {
+#profile .skill .csh {
   color: #eece66;
 }
 
-#profile .skill .jq {
+#profile .skill .git {
   color: #69aa9c;
 }
 
-#profile .skill .bs {
+#profile .skill .js {
   color: #8d7dac;
 }
 
-#profile .skill .wp {
+#profile .skill .uni {
   color: #808080;
 }
 
@@ -391,7 +409,6 @@ CONTACT
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
 }
 
 #contact p {
@@ -564,7 +581,7 @@ footer p {
 /*
 DESKTOP SIZE
 ================================================ */
-@media (min-width: 900px) {
+@media (min-width: 990px) {
   /* Common */
   h2 {
     font-size: 5rem;
@@ -599,7 +616,7 @@ DESKTOP SIZE
     font-size: 4rem;
     margin-bottom: 50px;
   }
-  #portfolio .pf-list,
+  #portfolio .gamedv,
   #portfolio .coding {
     width: 100%;
     max-width: fit-content;
@@ -616,8 +633,11 @@ DESKTOP SIZE
     justify-content: space-evenly;
   }
   #profile .container .prof img {
-    width: 320px;
-    height: 450px;
+    width: 90%;
+    min-width: 300px;
+    max-width: 380px;
+    height: 90%;
+    max-height: 450px;
   }
   #profile .container .text {
     margin: 40px 0 0 10px;
@@ -702,4 +722,32 @@ DESKTOP SIZE
 .loadingText {
   animation: 1.5s flashing infinite;
   /* ローディングアイコン */
+}
+
+/*
+PHONE SIZE
+================================================ */
+@media (max-width: 805px) {
+  #profile p {
+    width: 250px;
+    margin: 0 auto 30px;
+    text-align: left;
+    font-size: 8px;
+    line-height: 1rem;
+  }
+  #profile .skill {
+    width: 200px;
+    margin: 10px auto;
+  }
+  #profile .skill p {
+    margin-bottom: 5px;
+    padding: 0;
+  }
+  #profile .skill p img {
+    width: 20px;
+  }
+  #profile .skill i {
+    font-size: 28px;
+    padding: 0px;
+  }
 }

@@ -173,38 +173,41 @@ PORTFOLIO
     87.5% { background-color: var(--green); }
     100% { background-color: var(--light-blue); }
 }
-#portfolio h1 {
-    font-size: 2.5rem;
-    margin: 6rem 0 0.5rem;
+#portfolio {
+    h1 {
+        font-size: 2.5rem;
+        margin: 6rem 0 0.5rem;
+    }
+
+    h4 {
+        font-size: 14px;
+        text-align: center;
+    }
     
-}
+    .gamedv,
+    .coding {
+        background-color: rgba(255,255,255,.8);
+        margin: 0 auto 30px;
+        padding: 20px 10px;
+        border-radius: 10px;
+    }
 
-.pf-list,
-.coding {
-    background-color: rgba(255,255,255,.8);
-    width: 97%;
-    max-width: 600px;
-    margin: 0 auto 30px;
-    padding: 20px 10px;
-    border-radius: 10px;
-}
+    .pf-list {
+        padding: 20px 30px;
+        text-align: center;
 
-.pf-list {
-    padding: 20px 30px;
-    text-align: center;
-
-    img {
-        width: 260px;
-        height: 330px;
+        img {
+        width: 320px;
+        height: 190px;
         margin-bottom: 10px;
         border-radius: 3px;
     }
-}
+    }
 
-.pf-list section {
-    margin: 20px auto;
-    width: 70%;
-    position: relative;
+    .pf-list section {
+        margin: 20px auto;
+        width: 70%;
+        position: relative;
 
     p {
         font-size: 15px;
@@ -215,38 +218,42 @@ PORTFOLIO
         font-size: 13px;
         font-weight: normal;
     }
+    }
+
+
+    .gamedv h3,
+    .coding h3 {
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .cd-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .cd-list section {
+        margin: 10px 30px;
+    }
+
+    .cd-list img {
+        width: 120px;
+        height: 200px;
+        border-radius: 3px;
+    }
+
+    .cd-list p {
+        font-size: 13px;
+        text-align: center;
+        margin-top: 5px;
+    }
 }
 
 
-.coding h3 {
-    font-size: 20px;
-    text-align: center;
-    padding-bottom: 20px;
-}
 
-.cd-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 
-.cd-list section {
-    margin: 10px 20px;
-}
-
-.cd-list img {
-    width: 170px;
-    height: 300px;
-    border-radius: 3px;
-}
-
-.cd-list p {
-    text-align: center;
-}
-
-.coming-soon {
-    opacity: 0.2;
-}
 
 /*
 PROFILE
@@ -259,7 +266,7 @@ PROFILE
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-fill-color: transparent;
+    //   text-fill-color: transparent;
     }
     .profimg {
         width: 300px;
@@ -270,9 +277,30 @@ PROFILE
     }
 
     p {
-        width: 500px;
+        width: 630px;
         margin: 0 auto 30px;
         text-align: left;
+        font-size: 15px;
+        line-height: 2.5rem;
+    }
+
+    p.prof_link {
+        color: #010b5e;
+        font-size: 16px;;
+        text-align: right;
+        padding-right: 40px;
+        margin-top: 10px;
+
+        a {
+            background-color: #dadffd;
+            padding: 5px;
+            border-radius: 4px;
+            border: 2px solid #8597ff;
+        }
+
+        :hover {
+            color: #0a178d;
+        }
     }
 
     h3 {
@@ -281,9 +309,7 @@ PROFILE
       padding-bottom: 20px;
     }
 
-    p {
-      line-height: 1.75rem;
-    }
+
 
     .skill {
         width: 500px;
@@ -309,16 +335,16 @@ PROFILE
         .cs {
             color: #8d95e4;
         }
-        .js {
+        .csh {
             color: #eece66;
         }
-        .jq {
+        .git {
             color: #69aa9c;
         }
-        .bs {
+        .js {
             color: #8d7dac;
         }
-        .wp {
+        .uni {
             color: #808080;
         }
     }
@@ -357,7 +383,7 @@ CONTACT
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-fill-color: transparent;
+        // text-fill-color: transparent;
     }
 
     p {
@@ -529,11 +555,10 @@ footer {
     }
 }
 
-
 /*
 DESKTOP SIZE
 ================================================ */
-@media (min-width: 900px) {
+@media (min-width: 990px) {
 /* Common */
     h2 {
         font-size: 5rem;
@@ -570,7 +595,8 @@ DESKTOP SIZE
             font-size: 4rem;
             margin-bottom: 50px;
         }
-        .pf-list,
+        // .pf-list,
+        .gamedv,
         .coding {
             width: 100%;
             max-width: fit-content;
@@ -588,8 +614,11 @@ DESKTOP SIZE
         display: flex;
         justify-content: space-evenly;
         .prof img{
-            width: 320px;
-            height: 450px;
+            width: 90%;
+            min-width: 300px;
+            max-width: 380px;
+            height: 90%;
+            max-height: 450px;
         }
 
         .text {
@@ -615,7 +644,7 @@ DESKTOP SIZE
     #contact {
         margin-bottom: 10px;
         h2 {
-        margin-bottom: 4rem;
+            margin-bottom: 4rem;
         }
         p {
             margin: 70px 0 50px;
@@ -683,4 +712,39 @@ DESKTOP SIZE
     .loadingText {
       animation: 1.5s flashing infinite;  /* ローディングアイコン */
     }
-  
+
+
+/*
+PHONE SIZE
+================================================ */
+@media (max-width: 805px) {
+
+    #profile{
+
+        p {
+            width: 250px;
+            margin: 0 auto 30px;
+            text-align: left;
+            font-size: 8px;
+            line-height: 1rem;
+        }
+        .skill {
+            width: 200px;
+            margin: 10px auto;
+
+            p {
+                margin-bottom: 5px;
+                padding: 0;
+
+                img {
+                    width: 20px;
+                }
+            }
+
+            i {
+                font-size: 28px;
+                padding: 0px;
+            }
+        }
+    }
+}
